@@ -1,0 +1,12 @@
+#signup,
+#signin {
+  margin-top: 60px;
+}
+
+#error {
+  color: red;
+}
+
+#warning {
+  color: yellow;
+}
