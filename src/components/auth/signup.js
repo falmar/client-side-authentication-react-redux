@@ -23,7 +23,7 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 
 class Signup extends Component {
 
-  handleFormSubmit({ e, email, password }) {   
+  handleFormSubmit({email, password }) {   
     this.props.signupUser(email, password);
     this.props.reset();
   }
@@ -42,7 +42,7 @@ class Signup extends Component {
 
 
   render() {
-    const { handleSubmit, pristine, reset, submitting, dirty, invalid } = this.props;
+    const { handleSubmit,  dirty, invalid } = this.props;
     return (
 
       <form id="signup" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>

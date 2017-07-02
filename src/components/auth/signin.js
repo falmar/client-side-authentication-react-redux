@@ -37,7 +37,7 @@ class Signin extends Component {
 
 
   render() {
-    const { handleSubmit,  pristine, reset, submitting,dirty, invalid} = this.props;
+    const { handleSubmit,dirty, invalid} = this.props;
    
     return (
       

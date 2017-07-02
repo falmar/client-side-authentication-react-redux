@@ -2,30 +2,23 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import fetchData from '../actions/fetchData';
 import { bindActionCreators } from 'redux';
-class Feature extends Component {
 
-    componentWillMount(){
-      this.props.fetchData();
-    }
-  
+
+
  
 
-  render() { 
-   let auth = this.props.auth;
+class Feature extends Component {
+  componentWillMount() {
+    this.props.fetchData();
+  }
+
+  render() {
     return (
-      
-      <div>
-        {auth ? (
-         <div>{this.props.data}</div>
-        ) : (
-           <div></div>
-          )}
-      </div>            
-        
-      
+      <div>{this.props.data}</div>
     );
   }
 }
+
 
 function mapStateToProps(state){
   return {

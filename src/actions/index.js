@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory} from 'react-router';
-import  {AUTH_USER, UNAUTH_USER, AUTH_ERROR} from  './types';
+import  {AUTH_USER} from  './types';
 import authError from './error';
 const ROOT_URL = 'http://localhost:3000/';
 
@@ -20,7 +20,7 @@ export default function signinUser(email, password) {
 
         browserHistory.push('/feature');
       })
-      .catch((err) => {
+      .catch(() => {
         dispatch(authError('I can\'t find you ... Please try again'));
       });
   };
