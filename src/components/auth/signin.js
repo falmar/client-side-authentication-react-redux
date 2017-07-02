@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import { connect } from 'react-redux';
 import signinUser from '../../actions';
 import { bindActionCreators } from 'redux';
@@ -21,6 +21,7 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 class Signin extends Component {
   handleFormSubmit({ email, password }) {      
     this.props.signinUser(email, password);
+    this.props.reset();
   }
   
   // error message alert from server
@@ -37,6 +38,7 @@ class Signin extends Component {
 
   render() {
     const { handleSubmit,  pristine, reset, submitting,dirty, invalid} = this.props;
+   
     return (
       
       <form id="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>      
@@ -64,7 +66,7 @@ class Signin extends Component {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.auth.error };
+  return { errorMessage: state.auth.error , auth : state.auth.authenticated};
 }
 
 function mapDispatchToProps(dispatch) {

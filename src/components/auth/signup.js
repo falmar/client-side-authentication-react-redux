@@ -25,7 +25,7 @@ class Signup extends Component {
 
   handleFormSubmit({ e, email, password }) {   
     this.props.signupUser(email, password);
-    this.props.reset()
+    this.props.reset();
   }
 
 

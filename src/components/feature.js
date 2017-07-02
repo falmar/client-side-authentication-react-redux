@@ -1,13 +1,42 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
+import fetchData from '../actions/fetchData';
+import { bindActionCreators } from 'redux';
 class Feature extends Component {
-  render() {
+
+    componentWillMount(){
+      this.props.fetchData();
+    }
+  
+ 
+
+  render() { 
+   let auth = this.props.auth;
     return (
+      
       <div>
-        <h1>Feature Page</h1>
-      </div>
+        {auth ? (
+         <div>{this.props.data}</div>
+        ) : (
+           <div></div>
+          )}
+      </div>            
+        
+      
     );
   }
 }
 
-export default Feature;
+function mapStateToProps(state){
+  return {
+    auth: state.auth.authenticated,
+    data: state.auth.data   
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    fetchData,
+  }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Feature);

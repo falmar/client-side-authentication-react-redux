@@ -1,9 +1,19 @@
-import  {AUTH_ERROR} from  './types';
+import  {AUTH_ERROR, CLEAR_ERROR} from  './types';
+
 
 export default function authError(error){
-  
-  return {
-    type: AUTH_ERROR,
-    payload: error
-  }
-  }
+ return function(dispatch) {  
+            
+        dispatch( {
+          type: AUTH_ERROR,
+          payload: error
+        });
+     
+        setTimeout(() => {
+          dispatch({
+            type: CLEAR_ERROR
+          });
+
+        }, 4000);
+ };
+}

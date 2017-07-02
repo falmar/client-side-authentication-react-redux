@@ -3,15 +3,16 @@ import { browserHistory} from 'react-router';
 import  {AUTH_USER, AUTH_ERROR} from  './types';
 import authError from './error';
 const ROOT_URL = 'http://localhost:3000/';
-let result;
+
+
 
  
-export default function signinUser(email, password) {
+export default function signupUser(email, password) {
   return function (dispatch) {
 
     // Submit email/password to the server
-   result = axios.post(`${ROOT_URL}signup`, { email, password })      
-      .then((response) => {        
+   axios.post(`${ROOT_URL}signup`, { email, password })      
+      .then(response => {        
         //update state
         dispatch({
           type: AUTH_USER
@@ -20,12 +21,11 @@ export default function signinUser(email, password) {
         localStorage.setItem('jwt_web_token', response.data.jwt_web_token);
         //redirect navigation on signin
 
-        browserHistory.push('/signin');
+        browserHistory.push('/feature');
       })
-       .catch((error) => {       
-
-        setTimeout(function(){ dispatch(authError('Hey your Email already exists with us')); }, 1200);
-       
-      });
+       .catch(error=> {
+         dispatch(authError(error.response.data.error));  
+             
+       });
   };
 }
