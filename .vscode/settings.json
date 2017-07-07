@@ -7,7 +7,6 @@
     "client/scripts": true,
     "client/config": true,
     "client/.snyk": true,
-    "3.8.1": true,
     ".eslintrc.json": true,
     ".eslintignore": true,
     ".env": true
