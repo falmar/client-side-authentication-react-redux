@@ -12,7 +12,7 @@
 ```
 
 ![](./public/images/image1.png)
-![](./public/images/image2.png)
+![](./public/images/image3.png)
 
 # API Endpoints
 
