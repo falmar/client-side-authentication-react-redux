@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { FETCH_DATA } from './types';
 import authError from './error';
+import { ROOT_URL } from '../../.env';
 
-const ROOT_URL = 'http://localhost:3000';
 
 export default function fetchData(){
   

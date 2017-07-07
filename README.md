@@ -11,6 +11,9 @@
 > open in browser localhost:8080
 ```
 
+![](./public/images/image1.png)
+![](./public/images/image2.png)
+
 # API Endpoints
 
 > all requests to the server are made to ROOT_URL localhost:3000/ 
