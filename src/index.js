@@ -21,6 +21,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 const token = localStorage.getItem('jwt_web_token');
 
+//if jwt token in localstorage the we presume user is authorized and dispatch an action.
 if(token){
 	store.dispatch({
 		type: AUTH_USER

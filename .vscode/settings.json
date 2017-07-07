@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+"files.exclude": {
+    "node_modules/": true,
+    ".snyk": true,
+    "client/node_modules": true,
+    "client/scripts": true,
+    "client/config": true,
+    "client/.snyk": true,
+    "3.8.1": true,
+    ".eslintrc.json": true,
+    ".eslintignore": true
+}
+}
