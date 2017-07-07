@@ -23,7 +23,7 @@ export default function signinUser(email, password) {
         browserHistory.push('/feature');
       })
       .catch(() => {
-        dispatch(authError('I can\'t find you ... Please try again'));
+        dispatch(authError('Email or Password are incorrect'));
       });
   };
 }
