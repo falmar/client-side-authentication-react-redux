@@ -8,7 +8,7 @@
     "url": "https://github.com/jwill9999/client-side-authentication-react-redux.git"
   },
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8081",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8080",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
