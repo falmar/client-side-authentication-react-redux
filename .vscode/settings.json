@@ -6,11 +6,7 @@
     "client/node_modules": true,
     "client/scripts": true,
     "client/config": true,
-<<<<<<< HEAD
-    "client/.snyk": true,    
-=======
-    "client/.snyk": true,
->>>>>>> 8c21a27d90edf74d07d16dd4cd716a107303f92c
+    "client/.snyk": true,      
     ".eslintrc.json": true,
     ".eslintignore": true,
     ".env": true
