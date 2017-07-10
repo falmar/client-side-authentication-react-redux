@@ -14,7 +14,11 @@ class Feature extends Component {
 
   render() {
     return (
-      <div>{this.props.data}</div>
+      <div id="data">
+        <h1>Data Protection</h1>
+        <hr />
+        <h3>{this.props.data}</h3>
+      </div>
     );
   }
 }
