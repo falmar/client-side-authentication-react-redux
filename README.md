@@ -22,6 +22,8 @@
 
 > /signup
 
+> /feature (protected route)
+
 
 # JWT Auth Token 
 
