@@ -11,3 +11,11 @@
 #warning {
   color: yellow;
 }
+
+p#errorPage { 
+   
+  padding-left: 5em;
+  margin-top: 3em;
+  font-size: 4em;
+  color: red;
+}
